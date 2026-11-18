@@ -1,2 +1,2 @@
 # electrotool-sg
-Tools for Electrical Project Engineer SG
+Singapore Electrical Engineering Toolkit
