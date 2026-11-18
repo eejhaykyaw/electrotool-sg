@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10283f"><title>ElectroTool SG | Electrical Engineering Toolkit</title>
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{--navy:#10283f;--blue:#176b87;--teal:#168477;--bg:#f3f6f8;--card:#fff;--ink:#172b3a;--muted:#607382;--line:#dce5eb;--warn:#fff3d8;--shadow:0 8px 24px #10283f12}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Arial}button,input,select{font:inherit}button{cursor:pointer}
+header{background:linear-gradient(120deg,#10283f,#176b87);color:#fff;padding:20px max(18px,calc((100% - 1200px)/2));display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.brand{font-size:20px;font-weight:800;letter-spacing:.04em}.brand small{display:block;font-size:11px;font-weight:500;opacity:.8;letter-spacing:.12em}
+.status{font-size:12px;border:1px solid #ffffff55;border-radius:99px;padding:6px 10px}
+.shell{max-width:1200px;margin:auto;padding:18px;display:grid;grid-template-columns:230px 1fr;gap:18px}
+nav{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;height:max-content;position:sticky;top:12px;box-shadow:var(--shadow)}
+nav button{display:flex;width:100%;border:0;background:transparent;padding:11px 12px;border-radius:9px;text-align:left;color:var(--ink);gap:10px;align-items:center}
+nav button.active,nav button:hover{background:#eaf3f6;color:#075b75;font-weight:700}
+main{min-width:0}.page{display:none}.page.active{display:block}.heading{margin:4px 0 14px}.heading h1{font-size:25px;margin:0 0 4px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);min-width:0}.card h3{margin:0 0 10px;font-size:16px}.metric{font-size:27px;font-weight:800;color:var(--blue)}.small{font-size:12px;color:var(--muted)}
+label{display:block;font-size:13px;font-weight:650;margin:10px 0 5px}input,select{width:100%;border:1px solid #cbd8e0;border-radius:8px;padding:10px;background:#fff;color:var(--ink)}input:focus,select:focus{outline:2px solid #8bc5d5;border-color:var(--blue)}
+.row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.btn{border:0;background:var(--blue);color:white;border-radius:8px;padding:10px 14px;font-weight:700}.btn.secondary{background:#e8f0f3;color:#16475b}.btn.danger{background:#a83b3b}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.result{background:#edf6f7;border:1px solid #d0e7e8;padding:12px;border-radius:10px;margin-top:12px}.result strong{font-size:22px;color:#126b70}
+.notice{background:var(--warn);border:1px solid #f0d99e;border-radius:10px;padding:12px;font-size:13px;margin:12px 0}
+.search{margin-bottom:12px}.symbol{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:10px;padding:12px;background:#fff}.symicon{width:54px;height:48px;background:#f0f5f7;border-radius:8px;display:grid;place-items:center;font-size:23px;font-weight:800;color:#135a75;flex-shrink:0}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:9px 7px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--muted);font-weight:700}td input{min-width:75px;padding:7px}
+.tablewrap{overflow:auto}.tag{display:inline-block;background:#e9f1f5;border-radius:99px;padding:3px 8px;font-size:11px;color:#28536a}
+footer{max-width:1200px;margin:0 auto;padding:0 18px 25px;color:var(--muted);font-size:12px}
+@media(max-width:760px){.shell{grid-template-columns:1fr;padding:12px}.grid,.grid.three{grid-template-columns:1fr}nav{position:static;display:flex;overflow:auto;gap:4px;padding:6px}nav button{white-space:nowrap;width:auto;padding:9px 11px}nav button span:last-child{display:inline}header{padding:16px}.heading h1{font-size:22px}}
+</style>
+</head>
+<body>
+<header><div class="brand">ELECTROTOOL SG<small>ELECTRICAL ENGINEERING • DESIGN • PROJECT DELIVERY</small></div><div class="status">Singapore reference edition · Phase 1</div></header>
+<div class="shell">
+<nav id="nav">
+<button class="active" data-page="home">⌂ <span>Dashboard</span></button>
+<button data-page="symbols">⌗ <span>Symbols library</span></button>
+<button data-page="fundamentals">∑ <span>Electrical basics</span></button>
+<button data-page="db">▤ <span>DB calculator</span></button>
+<button data-page="cable">⌁ <span>Cable & voltage drop</span></button>
+<button data-page="library">▣ <span>Standards library</span></button>
+<button data-page="roadmap">☷ <span>Future modules</span></button>
+</nav>
+<main>
+<section class="page active" id="home">
+<div class="heading"><h1>Engineering workspace</h1><div class="muted">A practical starting toolkit for commercial, industrial and building electrical projects.</div></div>
+<div class="grid three">
+<div class="card"><div class="small">QUICK CALCULATOR</div><h3>Power & current</h3><div class="metric">kW · kVA · A</div><p class="small">Single-phase and three-phase calculations.</p><button class="btn" onclick="showPage('fundamentals')">Open calculator</button></div>
+<div class="card"><div class="small">DISTRIBUTION</div><h3>DB load schedule</h3><div class="metric">Circuits</div><p class="small">Add circuits, estimate connected load and current.</p><button class="btn" onclick="showPage('db')">Open DB tool</button></div>
+<div class="card"><div class="small">DESIGN REFERENCE</div><h3>Electrical symbols</h3><div class="metric">Library</div><p class="small">Search common symbols and abbreviations.</p><button class="btn" onclick="showPage('symbols')">Browse symbols</button></div>
+</div>
+<div class="notice"><b>Engineering-use notice:</b> This first release provides preliminary calculations and reference material. It does not select or certify protective devices/cables, verify compliance, or replace a competent electrical designer or Singapore Licensed Electrical Worker (LEW). Confirm every design against current Singapore requirements, project specifications, manufacturer data and site conditions.</div>
+<div class="card"><h3>Project workflow</h3><div class="grid"><div><b>1. Define the supply</b><p class="small">Voltage, phase, frequency, earthing arrangement and source fault level.</p></div><div><b>2. Establish loads</b><p class="small">Connected load, demand, diversity, load type and phase allocation.</p></div><div><b>3. Verify design</b><p class="small">Cable installation method, derating, voltage drop, fault protection and coordination.</p></div><div><b>4. Deliver & document</b><p class="small">Drawings, BOQ, inspection, test records and handover.</p></div></div></div>
+</section>
+<section class="page" id="symbols">
+<div class="heading"><h1>Electrical symbols library</h1><div class="muted">Common schematic abbreviations. Graphic marks are simplified text representations, not CAD-standard symbol blocks.</div></div>
+<input class="search" id="symbolSearch" placeholder="Search: MCB, earth, socket, lighting..." oninput="renderSymbols()">
+<div class="grid" id="symbolList"></div>
+</section>
+<section class="page" id="fundamentals">
+<div class="heading"><h1>Electrical fundamentals calculator</h1><div class="muted">Idealized steady-state calculations using RMS values.</div></div>
+<div class="grid">
+<div class="card">
+<h3>Power, apparent power & current</h3>
+<label>Supply</label><select id="fPhase"><option value="3">Three-phase</option><option value="1">Single-phase</option></select>
+<div class="row"><div><label>Voltage (V)</label><input id="fVolt" type="number" value="400" min="1"></div><div><label>Real power (kW)</label><input id="fKw" type="number" value="30" min="0" step="0.1"></div></div>
+<div class="row"><div><label>Power factor (0–1)</label><input id="fPf" type="number" value="0.85" min="0.01" max="1" step="0.01"></div><div><label>Efficiency (%)</label><input id="fEff" type="number" value="100" min="1" max="100"></div></div>
+<button class="btn" onclick="calcFund()">Calculate</button><div class="result" id="fResult">Enter values and calculate.</div>
+<p class="small">For a motor, enter shaft output power only if efficiency is included. For an electrical input load, use 100% efficiency to avoid applying efficiency twice. Three-phase assumes balanced load.</p>
+</div>
+<div class="card">
+<h3>Power factor & reactive power</h3>
+<label>Real power (kW)</label><input id="qKw" type="number" value="30" min="0">
+<label>Power factor</label><input id="qPf" type="number" value="0.85" min="0.01" max="1" step="0.01">
+<button class="btn" onclick="calcPF()">Calculate</button><div class="result" id="qResult">Enter values and calculate.</div>
+<p class="small">kVA is apparent power; kVAR is reactive power. Power factor correction equipment requires a proper study and should not be sized from this result alone.</p>
+</div>
+</div>
+</section>
+<section class="page" id="db">
+<div class="heading"><h1>Distribution board load schedule</h1><div class="muted">Build a preliminary circuit schedule and estimate total load/current.</div></div>
+<div class="card">
+<div class="row"><div><label>DB supply</label><select id="dbPhase" onchange="renderDB()"><option value="3">Three-phase, 400 V</option><option value="1">Single-phase, 230 V</option></select></div><div><label>Assumed power factor</label><input id="dbPf" type="number" value="0.9" min="0.01" max="1" step="0.01" onchange="renderDB()"></div></div>
+<div class="actions"><button class="btn" onclick="addCircuit()">+ Add circuit</button><button class="btn secondary" onclick="exportDB()">Export CSV</button><button class="btn secondary" onclick="resetDB()">Reset</button></div>
+<div class="tablewrap" style="margin-top:12px"><table><thead><tr><th>#</th><th>Circuit / load</th><th>Phase</th><th>Qty</th><th>Unit W</th><th>Demand %</th><th>Load W</th><th></th></tr></thead><tbody id="dbRows"></tbody></table></div>
+<div class="grid three" style="margin-top:14px"><div class="card"><div class="small">CONNECTED LOAD</div><div class="metric" id="dbConnected">0 kW</div></div><div class="card"><div class="small">DEMAND LOAD</div><div class="metric" id="dbDemand">0 kW</div></div><div class="card"><div class="small">ESTIMATED LINE CURRENT</div><div class="metric" id="dbCurrent">0 A</div></div></div>
+<div class="notice">This schedule applies each circuit's demand percentage independently and assumes a balanced three-phase total for the current estimate. It does not perform diversity assessment, phase balancing, neutral loading, harmonics, protective-device selection, busbar sizing or cable verification. Review applicable demand factors and project criteria.</div>
+</div>
+</section>
+<section class="page" id="cable">
+<div class="heading"><h1>Cable & voltage-drop calculator</h1><div class="muted">Calculate voltage drop from a user-supplied cable resistance/reactance or voltage-drop constant.</div></div>
+<div class="grid">
+<div class="card">
+<h3>Voltage drop – impedance method</h3>
+<label>Supply</label><select id="vPhase"><option value="3">Three-phase</option><option value="1">Single-phase</option></select>
+<div class="row"><div><label>Current (A)</label><input id="vI" type="number" value="32" min="0"></div><div><label>One-way length (m)</label><input id="vL" type="number" value="40" min="0"></div></div>
+<div class="row"><div><label>R (Ω/km)</label><input id="vR" type="number" value="3.08" min="0" step="0.001"></div><div><label>X (Ω/km)</label><input id="vX" type="number" value="0.08" min="0" step="0.001"></div></div>
+<div class="row"><div><label>Power factor</label><input id="vPf" type="number" value="0.9" min="0" max="1" step="0.01"></div><div><label>Nominal voltage (V)</label><input id="vVolt" type="number" value="400" min="1"></div></div>
+<button class="btn" onclick="calcVD()">Calculate</button><div class="result" id="vResult">Enter values and calculate.</div>
+<p class="small">Uses ΔV = √3 × I × L × (R cosφ + X sinφ) / 1000 for three-phase, and 2 × I × L × (...) / 1000 for single-phase. R and X are per conductor in Ω/km; length is one-way. Assumes steady-state sinusoidal conditions.</p>
+</div>
+<div class="card">
+<h3>What you still need to verify</h3>
+<ul class="small"><li>Current-carrying capacity for the actual installation method.</li><li>Ambient temperature, grouping and thermal insulation derating.</li><li>Conductor material, insulation temperature rating and termination limits.</li><li>Short-circuit withstand and automatic disconnection requirements.</li><li>Protective-device coordination and maximum permitted voltage drop.</li><li>Manufacturer cable data and current Singapore standards.</li></ul>
+</div>
+</div>
+</section>
+<section class="page" id="library">
+<div class="heading"><h1>Singapore technical reference library</h1><div class="muted">Reference index only. Obtain current licensed copies and verify amendments before design use.</div></div>
+<div class="card">
+<h3>Core references to consult</h3>
+<table><thead><tr><th>Reference</th><th>Subject</th><th>Use in toolkit</th></tr></thead><tbody>
+<tr><td>SS 638</td><td>Code of practice for electrical installations</td><td>Installation design and verification</td></tr>
+<tr><td>SS 650-1</td><td>Temporary electrical installations – construction sites</td><td>Temporary site supplies</td></tr>
+<tr><td>SS 650-2</td><td>Temporary electrical installations – events</td><td>Temporary event supplies</td></tr>
+<tr><td>IEC 60364</td><td>Low-voltage electrical installations</td><td>International technical background</td></tr>
+<tr><td>IEC 61439</td><td>Low-voltage switchgear and controlgear assemblies</td><td>DB/MDB assembly requirements</td></tr>
+<tr><td>IEC 60947</td><td>Low-voltage switchgear and controlgear</td><td>Protective and switching devices</td></tr>
+<tr><td>IEC 60529</td><td>Degrees of protection (IP Code)</td><td>Enclosure selection</td></tr>
+<tr><td>IEC 60617</td><td>Graphical symbols for diagrams</td><td>Drawing symbols</td></tr>
+</tbody></table>
+<div class="notice">Do not assume an IEC publication automatically overrides Singapore-adopted standards, EMA requirements, project specifications or authority conditions. Check the current edition, amendments and applicability.</div>
+<h3>Official starting points</h3>
+<ul><li><a href="https://www.ema.gov.sg/" target="_blank" rel="noopener">Energy Market Authority (EMA)</a></li><li><a href="https://www.enterprisesg.gov.sg/quality-standards/standards" target="_blank" rel="noopener">Enterprise Singapore – Standards</a></li><li><a href="https://www.singaporestandardseshop.sg/" target="_blank" rel="noopener">Singapore Standards eShop</a></li></ul>
+</div>
+</section>
+<section class="page" id="roadmap">
+<div class="heading"><h1>Expansion roadmap</h1><div class="muted">Designed to add modules without changing the core navigation.</div></div>
+<div class="grid">
+<div class="card"><span class="tag">Phase 2</span><h3>Design & estimation</h3><ul class="small"><li>DB schedule with phase allocation and load types</li><li>BOQ and SOR builder</li><li>SLD builder / drawing legend export</li><li>Equipment and manufacturer datasheets</li><li>PDF, XLSX and quotation exports</li></ul></div>
+<div class="card"><span class="tag">Phase 3</span><h3>Project execution</h3><ul class="small"><li>Project and subcontractor tracker</li><li>Site survey and progress photos</li><li>RFI, variation and issue register</li><li>QA/QC inspection and punch lists</li><li>Testing, commissioning and handover</li></ul></div>
+<div class="card"><span class="tag">Phase 4</span><h3>Advanced engineering</h3><ul class="small"><li>Cable ampacity and derating engine</li><li>Short-circuit and fault-loop calculations</li><li>Earthing and bonding</li><li>Protection coordination and discrimination</li><li>Transformer, generator and UPS sizing</li><li>Harmonics and power quality</li></ul></div>
+<div class="card"><span class="tag">Platform</span><h3>Future architecture</h3><ul class="small"><li>Separate calculation modules with versioned formulas</li><li>Project-based data model and local storage</li><li>Offline-first PWA and sync-ready structure</li><li>Role-based access when multi-user backend is added</li><li>Audit trail for engineering revisions</li></ul></div>
+</div>
+</section>
+</main>
+</div>
+<footer>ElectroTool SG · Prototype v0.1 · Calculation outputs are preliminary and must be independently checked before use in design, procurement, installation or certification.</footer>
+<script>
+const symbols=[
+["MCB","Miniature circuit breaker","Protection","▭"],["MCCB","Moulded-case circuit breaker","Protection","▣"],["ACB","Air circuit breaker","Protection","□"],["RCCB","Residual current circuit breaker","Protection","ΔI"],["RCBO","Overcurrent + residual current protection","Protection","IΔ"],["SPD","Surge protective device","Protection","⚡"],["ISO","Isolator / disconnector","Switchgear","—o/ o—"],["DB","Distribution board","Distribution","[DB]"],["MDB","Main distribution board","Distribution","[MDB]"],["SMDB","Sub-main distribution board","Distribution","[SMDB]"],["L","Lighting point","Lighting","⊗"],["EL","Emergency luminaire","Lighting","✳"],["S","One-way switch","Lighting","S"],["S2","Two-way switch","Lighting","S₂"],["SO","Socket outlet","Power","○∥"],["3P SO","Three-phase socket outlet","Power","○3"],["M","Motor","Equipment","Ⓜ"],["TX","Transformer","Equipment",")))"],["GEN","Generator","Equipment","G"],["UPS","Uninterruptible power supply","Equipment","[UPS]"],["N","Neutral conductor","Wiring","N"],["PE","Protective earth conductor","Earthing","⏚"],["EB","Earth bar","Earthing","━━⏚"],["JB","Junction box","Wiring","□×"],["JBX","Cable junction / termination point","Wiring","●"],["CT","Current transformer","Measurement","(CT)"],["V","Voltmeter","Measurement","Ⓥ"],["A","Ammeter","Measurement","Ⓐ"],["K","Contactor","Control","K"],["RLY","Relay","Control","R"]]
+function renderSymbols(){let q=(document.getElementById('symbolSearch')?.value||'').toLowerCase();let list=symbols.filter(s=>s.join(' ').toLowerCase().includes(q));document.getElementById('symbolList').innerHTML=list.map(s=>`<div class="symbol"><div class="symicon">${s[3]}</div><div><b>${s[0]}</b><div>${s[1]}</div><span class="tag">${s[2]}</span></div></div>`).join('')||'<p class="muted">No matching symbols.</p>'}
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+function num(id){return Number(document.getElementById(id).value)}
+function calcFund(){let ph=num('fPhase'),v=num('fVolt'),kw=num('fKw'),pf=num('fPf'),eff=num('fEff')/100;if(!(v>0&&kw>=0&&pf>0&&pf<=1&&eff>0&&eff<=1)){fResult.innerHTML='Check inputs. PF must be greater than 0 and no more than 1.';return}let kva=kw/(pf*eff),i=kva*1000/(ph===3?Math.sqrt(3)*v:v);fResult.innerHTML=`<b>Apparent power</b>: ${kva.toFixed(2)} kVA<br><b>Estimated line current</b>: ${i.toFixed(2)} A<br><b>Real power</b>: ${kw.toFixed(2)} kW`}
+function calcPF(){let kw=num('qKw'),pf=num('qPf');if(kw<0||pf<=0||pf>1){qResult.textContent='Check load and PF (0–1).';return}let kva=kw/pf,kvar=Math.sqrt(Math.max(0,kva*kva-kw*kw));qResult.innerHTML=`<b>Apparent power</b>: ${kva.toFixed(2)} kVA<br><b>Reactive power</b>: ${kvar.toFixed(2)} kVAR`}
+let circuits=[{name:'Lighting',phase:'L1',qty:1,w:1200,d:100},{name:'Socket outlets',phase:'L2',qty:1,w:2400,d:60},{name:'Air-conditioning',phase:'L3',qty:1,w:5000,d:100}];
+function addCircuit(){circuits.push({name:'New circuit',phase:'L1',qty:1,w:1000,d:100});renderDB()}
+function resetDB(){circuits=[];renderDB()}
+function renderDB(){let body=document.getElementById('dbRows');body.innerHTML=circuits.map((c,i)=>`<tr><td>${i+1}</td><td><input aria-label="Circuit name" value="${c.name}" onchange="circuits[${i}].name=this.value"></td><td><select onchange="circuits[${i}].phase=this.value"><option ${c.phase==='L1'?'selected':''}>L1</option><option ${c.phase==='L2'?'selected':''}>L2</option><option ${c.phase==='L3'?'selected':''}>L3</option></select></td><td><input type="number" min="0" value="${c.qty}" onchange="circuits[${i}].qty=+this.value;renderDB()"></td><td><input type="number" min="0" value="${c.w}" onchange="circuits[${i}].w=+this.value;renderDB()"></td><td><input type="number" min="0" max="100" value="${c.d}" onchange="circuits[${i}].d=+this.value;renderDB()"></td><td>${(c.qty*c.w*c.d/100).toFixed(0)}</td><td><button class="btn danger" onclick="circuits.splice(${i},1);renderDB()">×</button></td></tr>`).join('');let connected=circuits.reduce((s,c)=>s+c.qty*c.w,0),demand=circuits.reduce((s,c)=>s+c.qty*c.w*c.d/100,0),ph=num('dbPhase'),pf=num('dbPf'),v=ph===3?400:230;let current=pf>0&&pf<=1?demand/(pf*(ph===3?Math.sqrt(3)*v:v)):0;dbConnected.textContent=(connected/1000).toFixed(2)+' kW';dbDemand.textContent=(demand/1000).toFixed(2)+' kW';dbCurrent.textContent=current.toFixed(2)+' A'}
+function exportDB(){let rows=[['Circuit','Phase','Quantity','Unit W','Demand %','Demand W'],...circuits.map(c=>[c.name,c.phase,c.qty,c.w,c.d,c.qty*c.w*c.d/100])];let csv=rows.map(r=>r.map(x=>'"'+String(x).replaceAll('"','""')+'"').join(',')).join('\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='DB-load-schedule.csv';a.click();URL.revokeObjectURL(a.href)}
+function calcVD(){let ph=num('vPhase'),I=num('vI'),L=num('vL'),R=num('vR'),X=num('vX'),pf=num('vPf'),V=num('vVolt');if(I<0||L<0||R<0||X<0||pf<0||pf>1||V<=0){vResult.textContent='Check all inputs.';return}let sin=Math.sqrt(1-pf*pf),factor=ph===3?Math.sqrt(3):2,drop=factor*I*L*(R*pf+X*sin)/1000,pct=drop/V*100;vResult.innerHTML=`<b>Voltage drop</b>: ${drop.toFixed(2)} V<br><b>Percentage drop</b>: ${pct.toFixed(2)}%<br><b>Estimated receiving voltage</b>: ${(V-drop).toFixed(2)} V`}
+function downloadManifest(){return}
+renderSymbols();renderDB();
+</script>
+</body></html>\n<script>if("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("./sw.js").catch(()=>{});</script>\n
