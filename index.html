@@ -25,10 +25,69 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:9px 7px;b
 .tablewrap{overflow:auto}.tag{display:inline-block;background:#e9f1f5;border-radius:99px;padding:3px 8px;font-size:11px;color:#28536a}
 footer{max-width:1200px;margin:0 auto;padding:0 18px 25px;color:var(--muted);font-size:12px}
 @media(max-width:760px){.shell{grid-template-columns:1fr;padding:12px}.grid,.grid.three{grid-template-columns:1fr}nav{position:static;display:flex;overflow:auto;gap:4px;padding:6px}nav button{white-space:nowrap;width:auto;padding:9px 11px}nav button span:last-child{display:inline}header{padding:16px}.heading h1{font-size:22px}}
+
+/* Phase 2 visual refresh */
+:root{--navy:#0b1d2b;--blue:#16708a;--teal:#138477;--bg:#eef2f5;--card:#ffffff;--ink:#172b3a;--muted:#657987;--line:#dce5eb;--shadow:0 5px 20px rgba(13,39,56,.055)}
+body{background:#eef2f5;color:#172b3a}
+header{background:#0b1d2b;padding:17px max(20px,calc((100% - 1320px)/2));min-height:76px;border-bottom:3px solid #168477}
+.brand{display:flex;align-items:center;gap:12px;font-size:19px;letter-spacing:.035em}
+.brand-mark{width:39px;height:39px;border-radius:11px;background:#14738b;display:grid;place-items:center;font-size:22px;color:#fff;box-shadow:0 4px 12px #0003}
+.brand b{color:#62c6b6}
+.brand small{font-size:10px;letter-spacing:.16em;color:#a9bac5;margin-top:3px}
+.status{background:#ffffff12;border-color:#ffffff25;color:#d8e5eb;letter-spacing:.04em}
+.status b{color:#76d4c3}
+.shell{max-width:1320px;grid-template-columns:248px minmax(0,1fr);gap:22px;padding:24px 20px}
+nav{background:#10283a;border:0;border-radius:16px;padding:12px;box-shadow:0 12px 30px #0b1d2b16;top:16px}
+nav button{color:#c3d1d9;padding:12px 13px;margin:2px 0;border-radius:9px;font-size:13px;transition:background .15s,color .15s}
+nav button.active{background:#1b5366;color:#fff;box-shadow:inset 3px 0 #53c5b1}
+nav button:hover{background:#173d50;color:#fff}
+main{min-width:0}
+.heading{margin:2px 0 20px;padding-bottom:13px;border-bottom:1px solid #dce5eb}
+.heading h1{font-size:27px;letter-spacing:-.035em;color:#122b3d}
+.heading .muted{font-size:13px}
+.card{border:1px solid #e0e7ec;border-radius:15px;box-shadow:0 5px 18px rgba(16,40,63,.045);padding:19px}
+.card h3{font-size:15px;color:#17374b;letter-spacing:-.01em}
+.grid{gap:16px}
+.grid.three{gap:14px}
+.metric{font-size:25px;color:#14748a;letter-spacing:-.04em}
+.btn{background:#126d86;border-radius:9px;padding:10px 15px;font-size:13px;box-shadow:0 2px 5px #126d861c}
+.btn:hover{background:#0d566b}
+.btn.secondary{background:#eaf1f4;color:#24536a;box-shadow:none}
+.btn.danger{background:#a83b3b;color:#fff}
+input,select{border-color:#d5e0e6;border-radius:9px;padding:10px 11px;font-size:13px}
+label{color:#334d5d;font-size:12px;letter-spacing:.015em}
+.result{background:#edf7f6;border-color:#d1e9e4;border-radius:11px}
+.notice{border-radius:11px}
+.symbol{border-radius:12px;border-color:#e1e9ed;box-shadow:0 2px 8px #17374b08}
+.symicon{background:#eaf3f6;border:1px solid #dce9ee;border-radius:10px}
+table{font-size:12px}
+th{background:#f5f8fa;white-space:nowrap}
+td,th{padding:10px 8px}
+.tablewrap{border:1px solid #e3eaee;border-radius:11px}
+.tablewrap table{border-collapse:separate;border-spacing:0}
+.tablewrap th:first-child{border-top-left-radius:10px}
+.tablewrap th:last-child{border-top-right-radius:10px}
+.tag{background:#e7f2f4;color:#246077;font-weight:650}
+footer{max-width:1320px;padding:0 20px 28px}
+.page#home .grid.three>.card{position:relative;overflow:hidden}
+.page#home .grid.three>.card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:#168477}
+.page#home .grid.three>.card:nth-child(2):before{background:#277eaa}
+.page#home .grid.three>.card:nth-child(3):before{background:#7b6bb2}
+@media(max-width:760px){
+ .shell{grid-template-columns:1fr;padding:13px;gap:14px}
+ nav{border-radius:12px;top:0}
+ nav button{font-size:12px}
+ header{padding:13px 16px}
+ .brand{font-size:17px}
+ .brand small{font-size:9px}
+ .heading h1{font-size:23px}
+ .card{padding:15px}
+}
+
 </style>
 </head>
 <body>
-<header><div class="brand">ELECTROTOOL SG<small>ELECTRICAL ENGINEERING • DESIGN • PROJECT DELIVERY</small></div><div class="status">Singapore reference edition · Phase 1</div></header>
+<header><div class="brand"><span class="brand-mark">⚡</span><span>ELECTROTOOL <b>SG</b><small>ENGINEERING • DESIGN • PROJECT DELIVERY</small></span></div><div class="status">SINGAPORE EDITION <b>· VERSION 0.2</b></div></header>
 <div class="shell">
 <nav id="nav">
 <button class="active" data-page="home">⌂ <span>Dashboard</span></button>
@@ -41,14 +100,22 @@ footer{max-width:1200px;margin:0 auto;padding:0 18px 25px;color:var(--muted);fon
 </nav>
 <main>
 <section class="page active" id="home">
-<div class="heading"><h1>Engineering workspace</h1><div class="muted">A practical starting toolkit for commercial, industrial and building electrical projects.</div></div>
+<div class="heading"><h1>Engineering workspace</h1><div class="muted">Your central workspace for electrical design, estimation and project delivery in Singapore.</div></div>
 <div class="grid three">
-<div class="card"><div class="small">QUICK CALCULATOR</div><h3>Power & current</h3><div class="metric">kW · kVA · A</div><p class="small">Single-phase and three-phase calculations.</p><button class="btn" onclick="showPage('fundamentals')">Open calculator</button></div>
-<div class="card"><div class="small">DISTRIBUTION</div><h3>DB load schedule</h3><div class="metric">Circuits</div><p class="small">Add circuits, estimate connected load and current.</p><button class="btn" onclick="showPage('db')">Open DB tool</button></div>
-<div class="card"><div class="small">DESIGN REFERENCE</div><h3>Electrical symbols</h3><div class="metric">Library</div><p class="small">Search common symbols and abbreviations.</p><button class="btn" onclick="showPage('symbols')">Browse symbols</button></div>
+<div class="card"><div class="small">DESIGN & CALCULATIONS</div><h3>Engineering tools</h3><div class="metric">01</div><p class="small">Symbols, electrical fundamentals, DB schedules and cable voltage-drop calculations.</p><button class="btn" onclick="showPage('fundamentals')">Open engineering tools</button></div>
+<div class="card"><div class="small">COMMERCIAL & ESTIMATION</div><h3>Cost planning</h3><div class="metric">02</div><p class="small">Prepare BOQs, calculate composite SOR rates and maintain material pricing.</p><button class="btn" onclick="showPage('boq')">Open estimation tools</button></div>
+<div class="card"><div class="small">DRAWING COORDINATION</div><h3>Design documentation</h3><div class="metric">03</div><p class="small">Organize distribution board hierarchies and prepare SLD coordination drafts.</p><button class="btn" onclick="showPage('sld')">Open design assistant</button></div>
 </div>
-<div class="notice"><b>Engineering-use notice:</b> This first release provides preliminary calculations and reference material. It does not select or certify protective devices/cables, verify compliance, or replace a competent electrical designer or Singapore Licensed Electrical Worker (LEW). Confirm every design against current Singapore requirements, project specifications, manufacturer data and site conditions.</div>
-<div class="card"><h3>Project workflow</h3><div class="grid"><div><b>1. Define the supply</b><p class="small">Voltage, phase, frequency, earthing arrangement and source fault level.</p></div><div><b>2. Establish loads</b><p class="small">Connected load, demand, diversity, load type and phase allocation.</p></div><div><b>3. Verify design</b><p class="small">Cable installation method, derating, voltage drop, fault protection and coordination.</p></div><div><b>4. Deliver & document</b><p class="small">Drawings, BOQ, inspection, test records and handover.</p></div></div></div>
+<div class="grid" style="margin-top:16px">
+<div class="card"><h3>Quick access</h3><div class="grid">
+<div><b>BOQ Generator</b><p class="small">Quantity takeoff, wastage, unit rates, contingency and tax.</p><button class="btn secondary" onclick="showPage('boq')">Create BOQ</button></div>
+<div><b>SOR Calculator</b><p class="small">Material, labour, equipment, overhead and profit build-up.</p><button class="btn secondary" onclick="showPage('sor')">Build unit rate</button></div>
+<div><b>Material Database</b><p class="small">Maintain project-specific material descriptions and supplier rates.</p><button class="btn secondary" onclick="showPage('materials')">Browse materials</button></div>
+<div><b>DB Load Schedule</b><p class="small">List circuits and estimate connected load and demand current.</p><button class="btn secondary" onclick="showPage('db')">Open DB schedule</button></div>
+</div></div>
+<div class="card"><h3>Engineering workflow</h3><ol class="small"><li><b>Define scope:</b> drawings, specifications, site conditions and supply parameters.</li><li><b>Develop design:</b> loads, distribution hierarchy, cable routes and protection studies.</li><li><b>Quantify:</b> material takeoff, BOQ, SOR and commercial assumptions.</li><li><b>Verify:</b> standards, technical submittals, calculations and authority requirements.</li><li><b>Deliver:</b> approved drawings, installation records, test results and handover.</li></ol></div>
+</div>
+<div class="notice"><b>Engineering-use notice:</b> Preliminary calculation and estimating tools only. Verify design, quantities, supplier rates, statutory requirements and technical submissions against current Singapore standards, project specifications, manufacturer data and competent professional review.</div>
 </section>
 <section class="page" id="symbols">
 <div class="heading"><h1>Electrical symbols library</h1><div class="muted">Common schematic abbreviations. Graphic marks are simplified text representations, not CAD-standard symbol blocks.</div></div>
@@ -138,7 +205,7 @@ footer{max-width:1200px;margin:0 auto;padding:0 18px 25px;color:var(--muted);fon
 </section>
 </main>
 </div>
-<footer>ElectroTool SG · Prototype v0.1 · Calculation outputs are preliminary and must be independently checked before use in design, procurement, installation or certification.</footer>
+<footer>ElectroTool SG · Version 0.2 · Design & Estimation Edition · Calculation outputs are preliminary and must be independently checked before use in design, procurement, installation or certification.</footer>
 <script>
 const symbols=[
 ["MCB","Miniature circuit breaker","Protection","▭"],["MCCB","Moulded-case circuit breaker","Protection","▣"],["ACB","Air circuit breaker","Protection","□"],["RCCB","Residual current circuit breaker","Protection","ΔI"],["RCBO","Overcurrent + residual current protection","Protection","IΔ"],["SPD","Surge protective device","Protection","⚡"],["ISO","Isolator / disconnector","Switchgear","—o/ o—"],["DB","Distribution board","Distribution","[DB]"],["MDB","Main distribution board","Distribution","[MDB]"],["SMDB","Sub-main distribution board","Distribution","[SMDB]"],["L","Lighting point","Lighting","⊗"],["EL","Emergency luminaire","Lighting","✳"],["S","One-way switch","Lighting","S"],["S2","Two-way switch","Lighting","S₂"],["SO","Socket outlet","Power","○∥"],["3P SO","Three-phase socket outlet","Power","○3"],["M","Motor","Equipment","Ⓜ"],["TX","Transformer","Equipment",")))"],["GEN","Generator","Equipment","G"],["UPS","Uninterruptible power supply","Equipment","[UPS]"],["N","Neutral conductor","Wiring","N"],["PE","Protective earth conductor","Earthing","⏚"],["EB","Earth bar","Earthing","━━⏚"],["JB","Junction box","Wiring","□×"],["JBX","Cable junction / termination point","Wiring","●"],["CT","Current transformer","Measurement","(CT)"],["V","Voltmeter","Measurement","Ⓥ"],["A","Ammeter","Measurement","Ⓐ"],["K","Contactor","Control","K"],["RLY","Relay","Control","R"]]
@@ -169,4 +236,4 @@ function renderM(){let q=(ms.value||'').toLowerCase();mr.innerHTML=mats.map((m,i
 function addD(){boards.push(['DB-'+String(boards.length+1).padStart(2,'0'),'SMDB-01','Distribution board','','']);renderD()}function renderD(){dr.innerHTML=boards.map((b,i)=>`<tr>${b.map((v,j)=>`<td><input value="${v}" onchange="boards[${i}][${j}]=this.value;saveP()"></td>`).join('')}<td><button class="btn danger" onclick="boards.splice(${i},1);renderD()">×</button></td></tr>`).join('')}function genD(){dout.textContent=`PROJECT: ${spj.value}\nSUPPLY: ${ss.value}\nSOURCE: ${ssrc.value}\n\n${ssrc.value}\n  |\n  +-- ${smdb.value} (MAIN SWITCHBOARD)\n`+boards.map(b=>`       |\n       +-- ${b[0]} [${b[2]}]${b[3]?' – incomer '+b[3]+' A':''}\n           Parent: ${b[1]}\n           ${b[4]}\n`).join('')}
 renderB();renderM();renderD();
 </script>
-</body></html>\n<script>if("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("./sw.js").catch(()=>{});</script>\n
+</body></html>\n<script>if("serviceWorker" in navigator && location.protocol.startsWith("http")){window.addEventListener("load",async()=>{try{const r=await navigator.serviceWorker.register("./sw.js");r.update()}catch(e){console.warn(e)}})}</script>\n
