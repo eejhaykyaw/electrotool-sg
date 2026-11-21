@@ -26,36 +26,30 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:9px 7px;b
 footer{max-width:1200px;margin:0 auto;padding:0 18px 25px;color:var(--muted);font-size:12px}
 @media(max-width:760px){.shell{grid-template-columns:1fr;padding:12px}.grid,.grid.three{grid-template-columns:1fr}nav{position:static;display:flex;overflow:auto;gap:4px;padding:6px}nav button{white-space:nowrap;width:auto;padding:9px 11px}nav button span:last-child{display:inline}header{padding:16px}.heading h1{font-size:22px}}
 
-/* Phase 2 visual refresh */
-:root{--navy:#0b1d2b;--blue:#16708a;--teal:#138477;--bg:#eef2f5;--card:#ffffff;--ink:#172b3a;--muted:#657987;--line:#dce5eb;--shadow:0 5px 20px rgba(13,39,56,.055)}
+/* Phase 3 visual system */
+:root{--navy:#0b1d2b;--blue:#16708a;--teal:#138477;--bg:#eef2f5;--card:#fff;--ink:#172b3a;--muted:#657987;--line:#dce5eb;--shadow:0 5px 20px rgba(13,39,56,.055)}
 body{background:#eef2f5;color:#172b3a}
-header{background:#0b1d2b;padding:17px max(20px,calc((100% - 1320px)/2));min-height:76px;border-bottom:3px solid #168477}
-.brand{display:flex;align-items:center;gap:12px;font-size:19px;letter-spacing:.035em}
-.brand-mark{width:39px;height:39px;border-radius:11px;background:#14738b;display:grid;place-items:center;font-size:22px;color:#fff;box-shadow:0 4px 12px #0003}
-.brand b{color:#62c6b6}
-.brand small{font-size:10px;letter-spacing:.16em;color:#a9bac5;margin-top:3px}
-.status{background:#ffffff12;border-color:#ffffff25;color:#d8e5eb;letter-spacing:.04em}
-.status b{color:#76d4c3}
+header{background:#0b1d2b;padding:17px max(20px,calc((100% - 1320px)/2));border-bottom:3px solid #168477}
+.brand{font-size:20px;letter-spacing:.04em}
+.brand small{font-size:10px;letter-spacing:.15em;color:#a9bac5}
+.status{background:#ffffff12;border-color:#ffffff25;color:#d8e5eb}
 .shell{max-width:1320px;grid-template-columns:248px minmax(0,1fr);gap:22px;padding:24px 20px}
 nav{background:#10283a;border:0;border-radius:16px;padding:12px;box-shadow:0 12px 30px #0b1d2b16;top:16px}
-nav button{color:#c3d1d9;padding:12px 13px;margin:2px 0;border-radius:9px;font-size:13px;transition:background .15s,color .15s}
+nav button{color:#c3d1d9;padding:12px 13px;margin:2px 0;border-radius:9px;font-size:13px}
 nav button.active{background:#1b5366;color:#fff;box-shadow:inset 3px 0 #53c5b1}
 nav button:hover{background:#173d50;color:#fff}
-main{min-width:0}
 .heading{margin:2px 0 20px;padding-bottom:13px;border-bottom:1px solid #dce5eb}
 .heading h1{font-size:27px;letter-spacing:-.035em;color:#122b3d}
 .heading .muted{font-size:13px}
 .card{border:1px solid #e0e7ec;border-radius:15px;box-shadow:0 5px 18px rgba(16,40,63,.045);padding:19px}
-.card h3{font-size:15px;color:#17374b;letter-spacing:-.01em}
+.card h3{font-size:15px;color:#17374b}
 .grid{gap:16px}
-.grid.three{gap:14px}
 .metric{font-size:25px;color:#14748a;letter-spacing:-.04em}
-.btn{background:#126d86;border-radius:9px;padding:10px 15px;font-size:13px;box-shadow:0 2px 5px #126d861c}
+.btn{background:#126d86;border-radius:9px;padding:10px 15px;font-size:13px}
 .btn:hover{background:#0d566b}
 .btn.secondary{background:#eaf1f4;color:#24536a;box-shadow:none}
-.btn.danger{background:#a83b3b;color:#fff}
 input,select{border-color:#d5e0e6;border-radius:9px;padding:10px 11px;font-size:13px}
-label{color:#334d5d;font-size:12px;letter-spacing:.015em}
+label{color:#334d5d;font-size:12px}
 .result{background:#edf7f6;border-color:#d1e9e4;border-radius:11px}
 .notice{border-radius:11px}
 .symbol{border-radius:12px;border-color:#e1e9ed;box-shadow:0 2px 8px #17374b08}
@@ -64,30 +58,13 @@ table{font-size:12px}
 th{background:#f5f8fa;white-space:nowrap}
 td,th{padding:10px 8px}
 .tablewrap{border:1px solid #e3eaee;border-radius:11px}
-.tablewrap table{border-collapse:separate;border-spacing:0}
-.tablewrap th:first-child{border-top-left-radius:10px}
-.tablewrap th:last-child{border-top-right-radius:10px}
 .tag{background:#e7f2f4;color:#246077;font-weight:650}
-footer{max-width:1320px;padding:0 20px 28px}
-.page#home .grid.three>.card{position:relative;overflow:hidden}
-.page#home .grid.three>.card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:#168477}
-.page#home .grid.three>.card:nth-child(2):before{background:#277eaa}
-.page#home .grid.three>.card:nth-child(3):before{background:#7b6bb2}
-@media(max-width:760px){
- .shell{grid-template-columns:1fr;padding:13px;gap:14px}
- nav{border-radius:12px;top:0}
- nav button{font-size:12px}
- header{padding:13px 16px}
- .brand{font-size:17px}
- .brand small{font-size:9px}
- .heading h1{font-size:23px}
- .card{padding:15px}
-}
+@media(max-width:760px){.shell{grid-template-columns:1fr;padding:13px;gap:14px}nav{border-radius:12px;top:0}nav button{font-size:12px}header{padding:13px 16px}.heading h1{font-size:23px}.card{padding:15px}}
 
 </style>
 </head>
 <body>
-<header><div class="brand"><span class="brand-mark">⚡</span><span>ELECTROTOOL <b>SG</b><small>ENGINEERING • DESIGN • PROJECT DELIVERY</small></span></div><div class="status">SINGAPORE EDITION <b>· VERSION 0.2</b></div></header>
+<header><div class="brand">ELECTROTOOL SG<small>ELECTRICAL ENGINEERING • DESIGN • PROJECT DELIVERY</small></div><div class="status">Singapore Edition · Phase 3</div></header>
 <div class="shell">
 <nav id="nav">
 <button class="active" data-page="home">⌂ <span>Dashboard</span></button>
@@ -96,30 +73,23 @@ footer{max-width:1320px;padding:0 20px 28px}
 <button data-page="db">▤ <span>DB calculator</span></button>
 <button data-page="cable">⌁ <span>Cable & voltage drop</span></button>
 <button data-page="library">▣ <span>Standards library</span></button><button data-page="boq">▤ <span>BOQ generator</span></button><button data-page="sor">¤ <span>SOR calculator</span></button><button data-page="materials">▦ <span>Material database</span></button><button data-page="sld">⌘ <span>SLD assistant</span></button>
+<button data-page="execution">▣ <span>Project execution</span></button>
 <button data-page="roadmap">☷ <span>Future modules</span></button>
 </nav>
 <main>
 <section class="page active" id="home">
-<div class="heading"><h1>Engineering workspace</h1><div class="muted">Your central workspace for electrical design, estimation and project delivery in Singapore.</div></div>
+<div class="heading"><h1>Engineering workspace</h1><div class="muted">A practical starting toolkit for commercial, industrial and building electrical projects.</div></div>
 <div class="grid three">
-<div class="card"><div class="small">DESIGN & CALCULATIONS</div><h3>Engineering tools</h3><div class="metric">01</div><p class="small">Symbols, electrical fundamentals, DB schedules and cable voltage-drop calculations.</p><button class="btn" onclick="showPage('fundamentals')">Open engineering tools</button></div>
-<div class="card"><div class="small">COMMERCIAL & ESTIMATION</div><h3>Cost planning</h3><div class="metric">02</div><p class="small">Prepare BOQs, calculate composite SOR rates and maintain material pricing.</p><button class="btn" onclick="showPage('boq')">Open estimation tools</button></div>
-<div class="card"><div class="small">DRAWING COORDINATION</div><h3>Design documentation</h3><div class="metric">03</div><p class="small">Organize distribution board hierarchies and prepare SLD coordination drafts.</p><button class="btn" onclick="showPage('sld')">Open design assistant</button></div>
+<div class="card"><div class="small">QUICK CALCULATOR</div><h3>Power & current</h3><div class="metric">kW · kVA · A</div><p class="small">Single-phase and three-phase calculations.</p><button class="btn" onclick="showPage('fundamentals')">Open calculator</button></div>
+<div class="card"><div class="small">DISTRIBUTION</div><h3>DB load schedule</h3><div class="metric">Circuits</div><p class="small">Add circuits, estimate connected load and current.</p><button class="btn" onclick="showPage('db')">Open DB tool</button></div>
+<div class="card"><div class="small">DESIGN REFERENCE</div><h3>Electrical symbols</h3><div class="metric">Library</div><p class="small">Search common symbols and abbreviations.</p><button class="btn" onclick="showPage('symbols')">Browse symbols</button></div>
 </div>
-<div class="grid" style="margin-top:16px">
-<div class="card"><h3>Quick access</h3><div class="grid">
-<div><b>BOQ Generator</b><p class="small">Quantity takeoff, wastage, unit rates, contingency and tax.</p><button class="btn secondary" onclick="showPage('boq')">Create BOQ</button></div>
-<div><b>SOR Calculator</b><p class="small">Material, labour, equipment, overhead and profit build-up.</p><button class="btn secondary" onclick="showPage('sor')">Build unit rate</button></div>
-<div><b>Material Database</b><p class="small">Maintain project-specific material descriptions and supplier rates.</p><button class="btn secondary" onclick="showPage('materials')">Browse materials</button></div>
-<div><b>DB Load Schedule</b><p class="small">List circuits and estimate connected load and demand current.</p><button class="btn secondary" onclick="showPage('db')">Open DB schedule</button></div>
-</div></div>
-<div class="card"><h3>Engineering workflow</h3><ol class="small"><li><b>Define scope:</b> drawings, specifications, site conditions and supply parameters.</li><li><b>Develop design:</b> loads, distribution hierarchy, cable routes and protection studies.</li><li><b>Quantify:</b> material takeoff, BOQ, SOR and commercial assumptions.</li><li><b>Verify:</b> standards, technical submittals, calculations and authority requirements.</li><li><b>Deliver:</b> approved drawings, installation records, test results and handover.</li></ol></div>
-</div>
-<div class="notice"><b>Engineering-use notice:</b> Preliminary calculation and estimating tools only. Verify design, quantities, supplier rates, statutory requirements and technical submissions against current Singapore standards, project specifications, manufacturer data and competent professional review.</div>
+<div class="notice"><b>Engineering-use notice:</b> This first release provides preliminary calculations and reference material. It does not select or certify protective devices/cables, verify compliance, or replace a competent electrical designer or Singapore Licensed Electrical Worker (LEW). Confirm every design against current Singapore requirements, project specifications, manufacturer data and site conditions.</div>
+<div class="card"><h3>Project workflow</h3><div class="grid"><div><b>1. Define the supply</b><p class="small">Voltage, phase, frequency, earthing arrangement and source fault level.</p></div><div><b>2. Establish loads</b><p class="small">Connected load, demand, diversity, load type and phase allocation.</p></div><div><b>3. Verify design</b><p class="small">Cable installation method, derating, voltage drop, fault protection and coordination.</p></div><div><b>4. Deliver & document</b><p class="small">Drawings, BOQ, inspection, test records and handover.</p></div></div></div>
 </section>
 <section class="page" id="symbols">
 <div class="heading"><h1>Electrical symbols library</h1><div class="muted">Common schematic abbreviations. Graphic marks are simplified text representations, not CAD-standard symbol blocks.</div></div>
-<input class="search" id="symbolSearch" placeholder="Search: MCB, earth, socket, lighting..." oninput="renderSymbols()">
+<div class="row"><div><input class="search" id="symbolSearch" placeholder="Search symbol, abbreviation or description..." oninput="renderSymbols()"></div><div><select id="symbolCategory" onchange="renderSymbols()"><option value="">All symbol categories</option></select></div></div><div class="small" id="symbolCount" style="margin:-4px 0 12px">Browse electrical plans, building services, ELV and electronics symbols.</div>
 <div class="grid" id="symbolList"></div>
 </section>
 <section class="page" id="fundamentals">
@@ -194,6 +164,73 @@ footer{max-width:1320px;padding:0 20px 28px}
 <section class="page" id="sor"><div class="heading"><h1>SOR rate calculator</h1><div class="muted">Composite unit-rate build-up for labour, materials, equipment and overhead.</div></div><div class="grid"><div class="card"><label>Work description</label><input id="sd" value="Install cable tray including supports"><div class="row"><div><label>Unit</label><select id="su"><option>m</option><option>no.</option><option>set</option><option>point</option><option>lot</option><option>hr</option></select></div><div><label>Quantity</label><input id="sq" type="number" value="100" min="0"></div></div><div class="row"><div><label>Material / unit</label><input id="sm" type="number" value="8" min="0"></div><div><label>Labour / unit</label><input id="sl" type="number" value="5" min="0"></div></div><div class="row"><div><label>Equipment / unit</label><input id="se" type="number" value="1" min="0"></div><div><label>Other direct cost / unit</label><input id="so" type="number" value="0" min="0"></div></div><div class="row"><div><label>Overhead %</label><input id="soh" type="number" value="10" min="0"></div><div><label>Profit %</label><input id="spr" type="number" value="10" min="0"></div></div><div class="row"><div><label>Tax %</label><input id="stax" type="number" value="0" min="0"></div><div><label>Currency</label><select id="sc"><option>SGD</option><option>PHP</option></select></div></div><button class="btn" onclick="calcS()">Calculate rate</button><div class="result" id="sr"></div><button class="btn secondary" onclick="toB()">Add calculated item to BOQ</button></div><div class="card"><h3>Rate methodology</h3><p class="small">Direct cost = material + labour + equipment + other direct cost. Overhead is applied to direct cost; profit is applied to direct cost plus overhead; tax is applied last if applicable.</p><div class="notice">Contract SOR rules may use a different markup sequence. Confirm the contract's commercial methodology and tax treatment.</div></div></div></section>
 <section class="page" id="materials"><div class="heading"><h1>Material database</h1><div class="muted">Generic starter catalog. Enter verified supplier rates and specifications.</div></div><input id="ms" class="search" placeholder="Search materials..." oninput="renderM()"><div class="card"><div class="tablewrap"><table><thead><tr><th>Material</th><th>Category</th><th>Unit</th><th>Specification notes</th><th>Rate</th><th></th></tr></thead><tbody id="mr"></tbody></table></div></div><div class="notice">No live market prices are supplied. Verify manufacturer, applicable standard, rating, dimensions, certification and supplier quote.</div><div class="card"><h3>Add catalog item</h3><div class="row"><div><label>Description</label><input id="mn"></div><div><label>Category</label><input id="mc" value="Other"></div></div><div class="row"><div><label>Unit</label><input id="mu" value="m"></div><div><label>Unit rate</label><input id="mrate" type="number" min="0" value="0"></div></div><label>Specification / notes</label><input id="mnote"><button class="btn" onclick="addM()">Save item</button></div></section>
 <section class="page" id="sld"><div class="heading"><h1>SLD hierarchy assistant</h1><div class="muted">Create a distribution hierarchy and exportable text draft.</div></div><div class="card"><div class="row"><div><label>Project</label><input id="spj" value="Sample Building"></div><div><label>Supply</label><select id="ss"><option>400/230 V, 3-phase, 4-wire, 50 Hz</option><option>230 V, single-phase, 2-wire, 50 Hz</option><option>Other – confirm</option></select></div></div><div class="row"><div><label>Source</label><input id="ssrc" value="Utility supply"></div><div><label>Main switchboard</label><input id="smdb" value="MDB-01"></div></div><button class="btn" onclick="addD()">+ Add downstream board</button><button class="btn secondary" onclick="genD()">Generate draft</button><div class="tablewrap"><table><thead><tr><th>Board tag</th><th>Parent</th><th>Description</th><th>Incomer A</th><th>Notes</th><th></th></tr></thead><tbody id="dr"></tbody></table></div><div class="result" id="dout" style="white-space:pre-wrap">Configure boards and generate a draft.</div><button class="btn secondary" onclick="navigator.clipboard?.writeText(dout.textContent)">Copy draft</button><p class="small">This is not a CAD drawing or design verification. Confirm feeder cable, protective-device settings, fault level, discrimination, earthing and assembly ratings separately.</p></div></section>
+
+<section class="page" id="execution">
+<div class="heading"><h1>Project execution & site control</h1><div class="muted">Track project delivery, subcontractors, site progress, RFIs, variations, inspections and commissioning records.</div></div>
+<div class="grid three">
+<div class="card"><div class="small">ACTIVE WORK ITEMS</div><div class="metric" id="exOpen">0</div><div class="small">Tasks not marked complete</div></div>
+<div class="card"><div class="small">OPEN SITE DEFECTS</div><div class="metric" id="exDefects">0</div><div class="small">Inspection items requiring action</div></div>
+<div class="card"><div class="small">OPEN RFIs / ISSUES</div><div class="metric" id="exRfi">0</div><div class="small">Awaiting response or closure</div></div>
+</div>
+<div class="card" style="margin-top:14px">
+<h3>Project information</h3>
+<div class="row"><div><label>Project name</label><input id="exProject" value="Electrical Installation Project"></div><div><label>Project reference</label><input id="exRef" value="PRJ-001"></div></div>
+<div class="row"><div><label>Client / main contractor</label><input id="exClient" placeholder="Client or main contractor"></div><div><label>Project manager / engineer</label><input id="exOwner" placeholder="Responsible person"></div></div>
+<div class="row"><div><label>Planned start</label><input id="exStart" type="date"></div><div><label>Target completion</label><input id="exFinish" type="date"></div></div>
+<button class="btn" onclick="saveExecProject()">Save project details</button>
+</div>
+<div class="card" style="margin-top:14px">
+<h3>Work programme & subcontractor tracker</h3>
+<div class="row"><div><label>Work package / activity</label><input id="taskName" placeholder="e.g. Install cable containment – Level 2"></div><div><label>Subcontractor / team</label><input id="taskSub" placeholder="Company or team"></div></div>
+<div class="row"><div><label>Planned start</label><input id="taskStart" type="date"></div><div><label>Due date</label><input id="taskDue" type="date"></div></div>
+<div class="row"><div><label>Progress (%)</label><input id="taskProgress" type="number" min="0" max="100" value="0"></div><div><label>Status</label><select id="taskStatus"><option>Not started</option><option>In progress</option><option>On hold</option><option>Completed</option></select></div></div>
+<button class="btn" onclick="addExecTask()">Add work item</button>
+<div class="tablewrap" style="margin-top:12px"><table><thead><tr><th>Activity</th><th>Subcontractor</th><th>Start</th><th>Due</th><th>Progress</th><th>Status</th><th></th></tr></thead><tbody id="taskRows"></tbody></table></div>
+</div>
+<div class="grid" style="margin-top:14px">
+<div class="card">
+<h3>RFI / technical issue register</h3>
+<label>Subject / description</label><input id="rfiSubject" placeholder="e.g. Confirm cable route above ceiling">
+<div class="row"><div><label>RFI / issue no.</label><input id="rfiNo" placeholder="RFI-001"></div><div><label>Responsible party</label><input id="rfiParty" placeholder="Client / consultant / subcontractor"></div></div>
+<div class="row"><div><label>Date raised</label><input id="rfiDate" type="date"></div><div><label>Status</label><select id="rfiStatus"><option>Open</option><option>Submitted</option><option>Under review</option><option>Responded</option><option>Closed</option></select></div></div>
+<button class="btn" onclick="addRFI()">Add RFI / issue</button>
+<div class="tablewrap" style="margin-top:10px"><table><thead><tr><th>Ref / subject</th><th>Party</th><th>Date</th><th>Status</th><th></th></tr></thead><tbody id="rfiRows"></tbody></table></div>
+</div>
+<div class="card">
+<h3>Variation order register</h3>
+<label>Variation description</label><input id="voDesc" placeholder="Describe scope change">
+<div class="row"><div><label>VO reference</label><input id="voNo" placeholder="VO-001"></div><div><label>Estimated value (SGD)</label><input id="voValue" type="number" min="0" value="0"></div></div>
+<div class="row"><div><label>Date</label><input id="voDate" type="date"></div><div><label>Status</label><select id="voStatus"><option>Draft</option><option>Submitted</option><option>Under review</option><option>Approved</option><option>Rejected</option></select></div></div>
+<button class="btn" onclick="addVO()">Add variation</button>
+<div class="tablewrap" style="margin-top:10px"><table><thead><tr><th>Reference / description</th><th>Value</th><th>Status</th><th></th></tr></thead><tbody id="voRows"></tbody></table></div>
+</div>
+</div>
+<div class="grid" style="margin-top:14px">
+<div class="card">
+<h3>Site inspection & punch list</h3>
+<label>Inspection / defect description</label><input id="defDesc" placeholder="e.g. Missing cable identification at DB-02">
+<div class="row"><div><label>Location / system</label><input id="defLoc" placeholder="Level, room, DB, circuit"></div><div><label>Responsible subcontractor</label><input id="defSub" placeholder="Company / team"></div></div>
+<div class="row"><div><label>Priority</label><select id="defPriority"><option>Low</option><option selected>Medium</option><option>High</option><option>Critical</option></select></div><div><label>Status</label><select id="defStatus"><option>Open</option><option>Rectification in progress</option><option>Ready for reinspection</option><option>Closed</option></select></div></div>
+<button class="btn" onclick="addDefect()">Add inspection item</button>
+<div class="tablewrap" style="margin-top:10px"><table><thead><tr><th>Defect / location</th><th>Subcontractor</th><th>Priority</th><th>Status</th><th></th></tr></thead><tbody id="defRows"></tbody></table></div>
+</div>
+<div class="card">
+<h3>Testing & commissioning records</h3>
+<label>Equipment / circuit under test</label><input id="testAsset" placeholder="e.g. DB-L2 / Circuit L2-04">
+<div class="row"><div><label>Test type</label><select id="testType"><option>Protective conductor continuity</option><option>Insulation resistance</option><option>Polarity</option><option>Earth electrode resistance</option><option>Earth fault loop impedance</option><option>RCD / RCBO operation</option><option>Phase sequence</option><option>Functional test</option><option>Other – specify in notes</option></select></div><div><label>Test date</label><input id="testDate" type="date"></div></div>
+<div class="row"><div><label>Result</label><select id="testResult"><option>Pass</option><option>Fail</option><option>Pending</option><option>Not applicable</option></select></div><div><label>Tested by</label><input id="testBy" placeholder="Name / company"></div></div>
+<label>Measured value / instrument / notes</label><input id="testNotes" placeholder="Record actual measured value, units, instrument ID and conditions">
+<button class="btn" onclick="addTest()">Save test record</button>
+<div class="tablewrap" style="margin-top:10px"><table><thead><tr><th>Asset / test</th><th>Date</th><th>Result</th><th>Tested by</th><th></th></tr></thead><tbody id="testRows"></tbody></table></div>
+</div>
+</div>
+<div class="card" style="margin-top:14px">
+<h3>Project data backup</h3>
+<p class="small">Records are stored in this browser on this device. Export a backup regularly. This version does not yet sync records between devices or users.</p>
+<div class="actions"><button class="btn" onclick="exportExec()">Export project data JSON</button><button class="btn secondary" onclick="exportExecCSV()">Export execution CSV</button><label class="btn secondary" style="display:inline-flex;align-items:center;gap:6px">Import backup JSON<input type="file" accept=".json,application/json" style="display:none" onchange="importExec(event)"></label></div>
+</div>
+<div class="notice">Safety and compliance: inspection and test templates are record-keeping aids only. Test methods, acceptance criteria, limits, instrument suitability and authorization must follow current Singapore requirements, project specifications, equipment instructions and the responsible competent person's direction. Never treat a blank or unrecorded test as a pass.</div>
+</section>
 <section class="page" id="roadmap">
 <div class="heading"><h1>Expansion roadmap</h1><div class="muted">Designed to add modules without changing the core navigation.</div></div>
 <div class="grid">
@@ -205,11 +242,12 @@ footer{max-width:1320px;padding:0 20px 28px}
 </section>
 </main>
 </div>
-<footer>ElectroTool SG · Version 0.2 · Design & Estimation Edition · Calculation outputs are preliminary and must be independently checked before use in design, procurement, installation or certification.</footer>
+<footer>ElectroTool SG · Project Execution & Expanded Symbols · v0.3 · Calculation outputs are preliminary and must be independently checked before use in design, procurement, installation or certification.</footer>
 <script>
 const symbols=[
-["MCB","Miniature circuit breaker","Protection","▭"],["MCCB","Moulded-case circuit breaker","Protection","▣"],["ACB","Air circuit breaker","Protection","□"],["RCCB","Residual current circuit breaker","Protection","ΔI"],["RCBO","Overcurrent + residual current protection","Protection","IΔ"],["SPD","Surge protective device","Protection","⚡"],["ISO","Isolator / disconnector","Switchgear","—o/ o—"],["DB","Distribution board","Distribution","[DB]"],["MDB","Main distribution board","Distribution","[MDB]"],["SMDB","Sub-main distribution board","Distribution","[SMDB]"],["L","Lighting point","Lighting","⊗"],["EL","Emergency luminaire","Lighting","✳"],["S","One-way switch","Lighting","S"],["S2","Two-way switch","Lighting","S₂"],["SO","Socket outlet","Power","○∥"],["3P SO","Three-phase socket outlet","Power","○3"],["M","Motor","Equipment","Ⓜ"],["TX","Transformer","Equipment",")))"],["GEN","Generator","Equipment","G"],["UPS","Uninterruptible power supply","Equipment","[UPS]"],["N","Neutral conductor","Wiring","N"],["PE","Protective earth conductor","Earthing","⏚"],["EB","Earth bar","Earthing","━━⏚"],["JB","Junction box","Wiring","□×"],["JBX","Cable junction / termination point","Wiring","●"],["CT","Current transformer","Measurement","(CT)"],["V","Voltmeter","Measurement","Ⓥ"],["A","Ammeter","Measurement","Ⓐ"],["K","Contactor","Control","K"],["RLY","Relay","Control","R"]]
-function renderSymbols(){let q=(document.getElementById('symbolSearch')?.value||'').toLowerCase();let list=symbols.filter(s=>s.join(' ').toLowerCase().includes(q));document.getElementById('symbolList').innerHTML=list.map(s=>`<div class="symbol"><div class="symicon">${s[3]}</div><div><b>${s[0]}</b><div>${s[1]}</div><span class="tag">${s[2]}</span></div></div>`).join('')||'<p class="muted">No matching symbols.</p>'}
+["MCB","Miniature circuit breaker","Protection","▭"],["MCCB","Moulded-case circuit breaker","Protection","▣"],["ACB","Air circuit breaker","Protection","□"],["RCCB","Residual current circuit breaker","Protection","ΔI"],["RCBO","Overcurrent + residual current protection","Protection","IΔ"],["SPD","Surge protective device","Protection","⚡"],["ISO","Isolator / disconnector","Switchgear","—o/ o—"],["DB","Distribution board","Distribution","[DB]"],["MDB","Main distribution board","Distribution","[MDB]"],["SMDB","Sub-main distribution board","Distribution","[SMDB]"],["L","Lighting point","Lighting","⊗"],["EL","Emergency luminaire","Lighting","✳"],["S","One-way switch","Lighting","S"],["S2","Two-way switch","Lighting","S₂"],["SO","Socket outlet","Power","○∥"],["3P SO","Three-phase socket outlet","Power","○3"],["M","Motor","Equipment","Ⓜ"],["TX","Transformer","Equipment",")))"],["GEN","Generator","Equipment","G"],["UPS","Uninterruptible power supply","Equipment","[UPS]"],["N","Neutral conductor","Wiring","N"],["PE","Protective earth conductor","Earthing","⏚"],["EB","Earth bar","Earthing","━━⏚"],["JB","Junction box","Wiring","□×"],["JBX","Cable junction / termination point","Wiring","●"],["CT","Current transformer","Measurement","(CT)"],["V","Voltmeter","Measurement","Ⓥ"],["A","Ammeter","Measurement","Ⓐ"],["K","Contactor","Control","K"],["RLY","Relay","Control","R"],["LP","Lighting panel","Distribution","[LP]"],["EML","Emergency lighting","Lighting","[EM]"],["EXIT","Exit sign","Lighting","EXIT"],["DL","Downlight","Lighting","⊙"],["FL","Fluorescent / linear luminaire","Lighting","▱"],["WL","Wall light","Lighting","◉"],["BL","Bollard light","Lighting","●"],["FAN","Ceiling / exhaust fan","Equipment","◉F"],["EF","Exhaust fan","Equipment","EF"],["ACU","Air-conditioning unit","Mechanical power","AC"],["FCU","Fan coil unit","Mechanical power","FCU"],["AHU","Air handling unit","Mechanical power","AHU"],["PUMP","Water pump","Mechanical power","P"],["WH","Water heater","Power","WH"],["OVEN","Oven / cooker outlet","Power","OV"],["ISO-S","Local switch isolator","Switchgear","I"],["PB","Push button","Control","PB"],["ESTOP","Emergency stop","Control","E"],["LCS","Local control station","Control","LCS"],["VSD","Variable speed drive","Control","VSD"],["OLR","Overload relay","Protection","OL"],["FUSE","Fuse","Protection","—[ ]—"],["AFDD","Arc fault detection device","Protection","AF"],["METER","Energy meter","Measurement","kWh"],["PFM","Power factor meter","Measurement","PF"],["FREQ","Frequency meter","Measurement","Hz"],["TS","Time switch","Control","TS"],["DIM","Dimmer","Lighting control","DIM"],["OS","Occupancy sensor","Lighting control","OS"],["PIR","PIR motion sensor","Lighting control","PIR"],["PH","Photocell","Lighting control","PH"],["DALI","DALI lighting control","Lighting control","DALI"],["FA-C","Fire alarm control panel","Fire alarm","FACP"],["SD","Smoke detector","Fire alarm","SD"],["HD","Heat detector","Fire alarm","HD"],["MCP","Manual call point","Fire alarm","MCP"],["SND","Fire alarm sounder","Fire alarm","SND"],["VAD","Visual alarm device","Fire alarm","VAD"],["FS","Flow switch","Fire alarm","FS"],["TAMP","Valve tamper switch","Fire alarm","TS"],["CCTV","CCTV camera","Security / ELV","CAM"],["DVR","Digital video recorder","Security / ELV","DVR"],["ACS","Access control panel","Security / ELV","ACS"],["CR","Card reader","Security / ELV","CR"],["ML","Magnetic door lock","Security / ELV","ML"],["REX","Request-to-exit button","Security / ELV","REX"],["DRC","Door contact","Security / ELV","DC"],["DATA","Data outlet (RJ45)","ICT / Data","RJ45"],["TEL","Telephone outlet","ICT / Data","TEL"],["WAP","Wireless access point","ICT / Data","WAP"],["FO","Fibre optic outlet","ICT / Data","FO"],["RACK","Network rack","ICT / Data","R"],["PATCH","Patch panel","ICT / Data","PP"],["SPK","Ceiling speaker","AV / Audio","SP"],["MIC","Microphone outlet","AV / Audio","MIC"],["TV","TV outlet","AV / Audio","TV"],["AV","AV outlet / plate","AV / Audio","AV"],["BMS","Building management system point","BMS / Controls","BMS"],["DDC","Direct digital controller","BMS / Controls","DDC"],["AI","Analogue input","BMS / Controls","AI"],["AO","Analogue output","BMS / Controls","AO"],["DI","Digital input","BMS / Controls","DI"],["DO","Digital output","BMS / Controls","DO"],["R","Resistor","Electronics","—/\\/\\/—"],["VR","Variable resistor / potentiometer","Electronics","—/\\/↗—"],["C","Capacitor","Electronics","—| |—"],["CP","Polarized capacitor","Electronics","—|(|—"],["L-COIL","Inductor / coil","Electronics","—∿∿—"],["DIODE","Diode","Electronics","—|>|—"],["ZENER","Zener diode","Electronics","—|<|—"],["LED","Light-emitting diode","Electronics","—|>|↗"],["PHOTO","Photodiode","Electronics","↘|>|—"],["BJT-NPN","NPN transistor","Electronics","NPN"],["BJT-PNP","PNP transistor","Electronics","PNP"],["MOSFET","MOSFET","Electronics","MOS"],["JFET","Junction FET","Electronics","JFET"],["SCR","Thyristor / SCR","Electronics","SCR"],["TRIAC","Triac","Electronics","TRIAC"],["BRIDGE","Bridge rectifier","Electronics","BR"],["CRYSTAL","Crystal oscillator","Electronics","XTAL"],["OPAMP","Operational amplifier","Electronics","▷"],["IC","Integrated circuit","Electronics","[IC]"],["REG","Voltage regulator","Electronics","REG"],["RELAY-COIL","Relay coil","Electronics","(K)"],["SW-SPST","SPST switch","Electronics","—o/ o—"],["SW-SPDT","SPDT switch","Electronics","—o↗"],["PUSH","Momentary pushbutton","Electronics","PB"],["GND","Signal ground","Electronics","⏚"],["VCC","Positive DC supply","Electronics","+V"],["BAT","Battery / DC source","Electronics","|‖|"],["AC-SRC","AC source","Electronics","~"],["DC-SRC","DC source","Electronics","⎓"],["AND","AND logic gate","Digital logic","&"],["OR","OR logic gate","Digital logic","≥1"],["NOT","Inverter / NOT gate","Digital logic","▷○"],["NAND","NAND logic gate","Digital logic","&○"],["NOR","NOR logic gate","Digital logic","≥1○"],["XOR","XOR logic gate","Digital logic","=1"],["DFF","D flip-flop","Digital logic","D"],["MUX","Multiplexer","Digital logic","MUX"],["ADC","Analogue-to-digital converter","Digital logic","ADC"],["DAC","Digital-to-analogue converter","Digital logic","DAC"],["OSC","Oscillator","Electronics","OSC"],["TP","Test point","Measurement","TP"],["FUSE-LINK","Fuse link","Protection","[F]"],["SHUNT","Current shunt","Measurement","SH"]]
+function initSymbolCategories(){let el=document.getElementById('symbolCategory');if(!el)return;let cats=[...new Set(symbols.map(s=>s[2]))].sort();el.innerHTML='<option value="">All symbol categories</option>'+cats.map(c=>`<option value="${c}">${c}</option>`).join('')}
+function renderSymbols(){let q=(document.getElementById('symbolSearch')?.value||'').toLowerCase(),cat=document.getElementById('symbolCategory')?.value||'';let list=symbols.filter(s=>s.join(' ').toLowerCase().includes(q)&&(!cat||s[2]===cat));document.getElementById('symbolList').innerHTML=list.map(s=>`<div class="symbol"><div class="symicon">${s[3]}</div><div><b>${s[0]}</b><div>${s[1]}</div><span class="tag">${s[2]}</span></div></div>`).join('')||'<p class="muted">No matching symbols.</p>';let count=document.getElementById('symbolCount');if(count)count.textContent=`Showing ${list.length} of ${symbols.length} symbol references. Simplified visual marks are for identification; verify drafting conventions and project legend.`}
 function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
 function num(id){return Number(document.getElementById(id).value)}
@@ -235,5 +273,33 @@ function calcS(){let direct=+sm.value + +sl.value + +se.value + +so.value,oh=dir
 function renderM(){let q=(ms.value||'').toLowerCase();mr.innerHTML=mats.map((m,i)=>({m,i})).filter(o=>o.m.join(' ').toLowerCase().includes(q)).map(({m,i})=>`<tr><td>${m[0]}</td><td>${m[1]}</td><td>${m[2]}</td><td>${m[3]}</td><td><input style="width:85px" type="number" min="0" value="${m[4]}" onchange="mats[${i}][4]=+this.value;saveP()"></td><td><button class="btn secondary" onclick="items.push({d:mats[${i}][0],u:mats[${i}][2],q:1,w:0,r:mats[${i}][4]});renderB();showPage('boq')">Add to BOQ</button></td></tr>`).join('')}function addM(){if(!mn.value.trim())return alert('Enter a description');mats.push([mn.value,mc.value,mu.value,mnote.value,+mrate.value]);mn.value='';renderM();saveP()}
 function addD(){boards.push(['DB-'+String(boards.length+1).padStart(2,'0'),'SMDB-01','Distribution board','','']);renderD()}function renderD(){dr.innerHTML=boards.map((b,i)=>`<tr>${b.map((v,j)=>`<td><input value="${v}" onchange="boards[${i}][${j}]=this.value;saveP()"></td>`).join('')}<td><button class="btn danger" onclick="boards.splice(${i},1);renderD()">×</button></td></tr>`).join('')}function genD(){dout.textContent=`PROJECT: ${spj.value}\nSUPPLY: ${ss.value}\nSOURCE: ${ssrc.value}\n\n${ssrc.value}\n  |\n  +-- ${smdb.value} (MAIN SWITCHBOARD)\n`+boards.map(b=>`       |\n       +-- ${b[0]} [${b[2]}]${b[3]?' – incomer '+b[3]+' A':''}\n           Parent: ${b[1]}\n           ${b[4]}\n`).join('')}
 renderB();renderM();renderD();
+
+// Expanded symbol catalogue and Phase 3 project execution workspace.
+let execData={project:{},tasks:[],rfis:[],vos:[],defects:[],tests:[]};
+try{execData=Object.assign(execData,JSON.parse(localStorage.getItem("etsg_exec")||"{}"))}catch(e){}
+function saveExec(){try{localStorage.setItem("etsg_exec",JSON.stringify(execData))}catch(e){alert("Local storage is full or unavailable. Export a backup and remove unused records.")}renderExec()}
+function saveExecProject(){execData.project={name:exProject.value,ref:exRef.value,client:exClient.value,owner:exOwner.value,start:exStart.value,finish:exFinish.value};saveExec();alert("Project details saved on this device.")}
+function addExecTask(){if(!taskName.value.trim()){alert("Enter a work package or activity.");return}execData.tasks.push({name:taskName.value,sub:taskSub.value,start:taskStart.value,due:taskDue.value,progress:Math.min(100,Math.max(0,+taskProgress.value||0)),status:taskStatus.value});taskName.value="";saveExec()}
+function addRFI(){if(!rfiSubject.value.trim()){alert("Enter an RFI or issue subject.");return}execData.rfis.push({no:rfiNo.value||"RFI-"+String(execData.rfis.length+1).padStart(3,"0"),subject:rfiSubject.value,party:rfiParty.value,date:rfiDate.value,status:rfiStatus.value});rfiSubject.value="";saveExec()}
+function addVO(){if(!voDesc.value.trim()){alert("Enter a variation description.");return}execData.vos.push({no:voNo.value||"VO-"+String(execData.vos.length+1).padStart(3,"0"),desc:voDesc.value,value:+voValue.value||0,date:voDate.value,status:voStatus.value});voDesc.value="";saveExec()}
+function addDefect(){if(!defDesc.value.trim()){alert("Enter an inspection finding or defect.");return}execData.defects.push({desc:defDesc.value,loc:defLoc.value,sub:defSub.value,priority:defPriority.value,status:defStatus.value});defDesc.value="";saveExec()}
+function addTest(){if(!testAsset.value.trim()){alert("Enter the equipment or circuit under test.");return}execData.tests.push({asset:testAsset.value,type:testType.value,date:testDate.value,result:testResult.value,by:testBy.value,notes:testNotes.value});testAsset.value="";saveExec()}
+function delExec(group,i){if(confirm("Delete this record?")){execData[group].splice(i,1);saveExec()}}
+function renderExec(){
+let p=execData.project||{};if(document.getElementById("exProject")){exProject.value=p.name||"Electrical Installation Project";exRef.value=p.ref||"PRJ-001";exClient.value=p.client||"";exOwner.value=p.owner||"";exStart.value=p.start||"";exFinish.value=p.finish||""}
+let tasks=execData.tasks||[],rfis=execData.rfis||[],vos=execData.vos||[],defs=execData.defects||[],tests=execData.tests||[];
+exOpen.textContent=tasks.filter(x=>x.status!=="Completed").length;exDefects.textContent=defs.filter(x=>x.status!=="Closed").length;exRfi.textContent=rfis.filter(x=>x.status!=="Closed"&&x.status!=="Responded").length;
+taskRows.innerHTML=tasks.map((x,i)=>`<tr><td>${esc3(x.name)}</td><td>${esc3(x.sub)}</td><td>${esc3(x.start)}</td><td>${esc3(x.due)}</td><td><input type="number" min="0" max="100" value="${x.progress}" style="width:68px" onchange="execData.tasks[${i}].progress=Math.min(100,Math.max(0,+this.value||0));saveExec()"></td><td><select onchange="execData.tasks[${i}].status=this.value;saveExec()">${["Not started","In progress","On hold","Completed"].map(s=>`<option ${s===x.status?"selected":""}>${s}</option>`).join("")}</select></td><td><button class="btn danger" onclick="delExec('tasks',${i})">×</button></td></tr>`).join("");
+rfiRows.innerHTML=rfis.map((x,i)=>`<tr><td><b>${esc3(x.no)}</b><br>${esc3(x.subject)}</td><td>${esc3(x.party)}</td><td>${esc3(x.date)}</td><td><select onchange="execData.rfis[${i}].status=this.value;saveExec()">${["Open","Submitted","Under review","Responded","Closed"].map(s=>`<option ${s===x.status?"selected":""}>${s}</option>`).join("")}</select></td><td><button class="btn danger" onclick="delExec('rfis',${i})">×</button></td></tr>`).join("");
+voRows.innerHTML=vos.map((x,i)=>`<tr><td><b>${esc3(x.no)}</b><br>${esc3(x.desc)}</td><td>SGD ${(+x.value||0).toFixed(2)}</td><td><select onchange="execData.vos[${i}].status=this.value;saveExec()">${["Draft","Submitted","Under review","Approved","Rejected"].map(s=>`<option ${s===x.status?"selected":""}>${s}</option>`).join("")}</select></td><td><button class="btn danger" onclick="delExec('vos',${i})">×</button></td></tr>`).join("");
+defRows.innerHTML=defs.map((x,i)=>`<tr><td>${esc3(x.desc)}<br><span class="small">${esc3(x.loc)}</span></td><td>${esc3(x.sub)}</td><td>${esc3(x.priority)}</td><td><select onchange="execData.defects[${i}].status=this.value;saveExec()">${["Open","Rectification in progress","Ready for reinspection","Closed"].map(s=>`<option ${s===x.status?"selected":""}>${s}</option>`).join("")}</select></td><td><button class="btn danger" onclick="delExec('defects',${i})">×</button></td></tr>`).join("");
+testRows.innerHTML=tests.map((x,i)=>`<tr><td>${esc3(x.asset)}<br><span class="small">${esc3(x.type)} · ${esc3(x.notes)}</span></td><td>${esc3(x.date)}</td><td>${esc3(x.result)}</td><td>${esc3(x.by)}</td><td><button class="btn danger" onclick="delExec('tests',${i})">×</button></td></tr>`).join("");
+}
+function esc3(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function exportExec(){let blob=new Blob([JSON.stringify(execData,null,2)],{type:"application/json"});downloadExecBlob(blob,"electrotool-project-backup.json")}
+function exportExecCSV(){let lines=[["Record Type","Reference / Name","Details","Status","Date / Due","Value / Progress"]];execData.tasks.forEach(x=>lines.push(["Task",x.name,x.sub,x.status,x.due,x.progress+"%"]));execData.rfis.forEach(x=>lines.push(["RFI",x.no,x.subject,x.status,x.date,""]));execData.vos.forEach(x=>lines.push(["Variation",x.no,x.desc,x.status,x.date,x.value]));execData.defects.forEach(x=>lines.push(["Inspection",x.desc,x.loc+" / "+x.sub,x.status,"",x.priority]));execData.tests.forEach(x=>lines.push(["Test",x.asset,x.type+" / "+x.notes,x.result,x.date,x.by]));let csv=lines.map(r=>r.map(v=>'"'+String(v??"").replaceAll('"','""')+'"').join(",")).join("\r\n");downloadExecBlob(new Blob([csv],{type:"text/csv"}),"electrotool-execution-register.csv")}
+function downloadExecBlob(blob,name){let a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1200)}
+function importExec(e){let f=e.target.files?.[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);if(!d||typeof d!=="object")throw Error();execData=Object.assign({project:{},tasks:[],rfis:[],vos:[],defects:[],tests:[]},d);saveExec();alert("Project backup imported.")}catch(err){alert("Invalid project backup file.")}};r.readAsText(f);e.target.value=""}
+initSymbolCategories();renderSymbols();renderExec();
 </script>
-</body></html>\n<script>if("serviceWorker" in navigator && location.protocol.startsWith("http")){window.addEventListener("load",async()=>{try{const r=await navigator.serviceWorker.register("./sw.js");r.update()}catch(e){console.warn(e)}})}</script>\n
+</body></html>\n<script>if("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("./sw.js").catch(()=>{});</script>\n
